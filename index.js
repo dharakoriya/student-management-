@@ -18,6 +18,8 @@ app.use(express.json());
 
 const connectDB = require("./config/database");
 
+const userRoutes = require('./Routes/userRoute');
+
 app.get("/", (req, res) => {
     res.status(200).json({ message: "Hello from crm server" });
 });
@@ -31,3 +33,5 @@ connectDB()
         console.error("Failed to connect to the database:", err.message);
         process.exit(1);
     });
+
+    app.use('/api/users', userRoutes);
