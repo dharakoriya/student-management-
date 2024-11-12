@@ -7,7 +7,7 @@ const path = require('path');
 
 app.use(
     cors({
-        origin: [/^http:\/\/localhost:\d+$/], // Allows any localhost port
+        origin: [/^http:\/\/localhost:\d+$/], 
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     })
