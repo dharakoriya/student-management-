@@ -21,6 +21,8 @@ const connectDB = require("./config/database");
 const userRoutes = require('./Routes/userRoute');
 const studentRoutes = require('./Routes/studentRoute');
 const facultyRoutes = require('./Routes/facultyRoutes');
+const courseRoutes = require('./Routes/courseRoutes');
+
 app.get("/", (req, res) => {
     res.status(200).json({ message: "Hello from crm server" });
 });
@@ -38,4 +40,5 @@ connectDB()
     app.use('/api/users', userRoutes);
     app.use('/api/students', studentRoutes);
     app.use('/api/faculty', facultyRoutes);
+    app.use('/api/courses', courseRoutes);
 
