@@ -92,7 +92,7 @@ exports.loginWithMobile = async (req, res) => {
       return res.status(400).json({
         status: "failed",
         type: "Login",
-        message: "email and password are required",
+        message: "Mobile number and password are required",
       });
     }
 
